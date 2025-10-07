@@ -19,9 +19,6 @@ public class Vehicle {
 
     public void addNode(Node node, int travelTime) {
         currentTime += travelTime;
-        if (currentTime < node.earliest) {
-            currentTime = node.earliest; // chờ đến earliest
-        }
         this.load += node.demand;
         this.route.add(node);
         this.currentNode = node.id;
